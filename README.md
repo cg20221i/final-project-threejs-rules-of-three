@@ -1,2 +1,2 @@
 # final-project-threejs-rules-of-three
-final-project-threejs-rules-of-three created by GitHub Classroom
+The Proposal Slides : https://docs.google.com/presentation/d/1XPrHtClGtqbx5eeXIwUOsMpb-h9sz4CJUfJhQ8YAUN0/edit?usp=sharing
