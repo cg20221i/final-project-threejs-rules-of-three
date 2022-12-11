@@ -249,7 +249,7 @@ var aframeInteractions = (function(){
         }else{
           document.getElementById("tshirtf").setAttribute("scale", "3 3 3");
           document.getElementById("tshirty").setAttribute("scale", "0 0 0");
-        //   document.getElementById("tshirtt").setAttribute("scale", "0.2 0.2 0.2");
+          // document.getElementById("tshirtt").setAttribute("scale", "0.2 0.2 0.2");
         }
 
       })
