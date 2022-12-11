@@ -1,7 +1,3 @@
-// I would like to apologize for this horribly oranized, super WET code.
-// My only excuse is that I had to learn an EXTREMELY COMPLEX library, and make TWO rooms in less than 48 hours.
-// So there you have it, enjoy!
-
 var allCustomAnimationsHelper = {
 
   updateHTMLDialogText: function( input ){
@@ -208,10 +204,8 @@ var allCustomAnimationsHelper = {
 
 
 
-/**
- * If an animation-click-handler is clicked,
+/*
  * run the animation with that attribute's name
- * reset all others with that name
  * and update the dialogue in case it gets clickeded
  */
 AFRAME.registerComponent('animation-click-handler', {
@@ -289,7 +283,6 @@ AFRAME.registerComponent('alpha-test', {
 /**
  * Any Element with the shadow-material will not be visible,
  * but WILL catch a shadow.
- * Used for matte-boxing!
  */
 AFRAME.registerComponent('shadow-material', {
   init: function(){

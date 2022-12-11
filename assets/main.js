@@ -1,14 +1,3 @@
-/**
- * This is an Immediately-Invoked Function Expression to contain and scope
- * all the JavaScript used, except for select functions,
- * which are returned at the end as public methods.
- *
- * Read more about it here:
- * https://stackoverflow.com/questions/8228281/what-is-the-function-construct-in-javascript
- *
- * As a general rule, all function/method names that are limited to it and
- * private are prefixed with an underscore (_)
- */
 var aframeInteractions = (function(){
 
 
@@ -18,16 +7,6 @@ var aframeInteractions = (function(){
   if( !showShadows )
     _shadowOpacity = 0.0012;
 
-
-
-  /* * * * * * * * * * * * AFRAME COMPONENT EXTENSIONS * * * * * * * * * * * * * */
-
-
-
-  /**
-   * Switches Rooms, which right now is switching html files,
-   * because I ran out of time to program them into a single application
-   */
   AFRAME.registerComponent('framechange-click-handler', {
     init: function () {
 
