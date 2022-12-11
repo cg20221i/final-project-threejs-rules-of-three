@@ -225,7 +225,7 @@ var aframeInteractions = (function(){
         // change the outfit(s) :D
         document.getElementById("tshirty").setAttribute("material", "src: #"+outfit);
         document.getElementById("tshirtf").setAttribute("material", "src: #"+outfit);
-        document.getElementById("tshirtt").setAttribute("material", "src: #"+outfit);
+        // document.getElementById("tshirtt").setAttribute("material", "src: #"+outfit);
       })
     });
 
@@ -245,11 +245,11 @@ var aframeInteractions = (function(){
         if(shotfittype == 'tshirty'){
           document.getElementById("tshirty").setAttribute("scale", "3 3 3");
           document.getElementById("tshirtf").setAttribute("scale", "0 0 0");
-          document.getElementById("tshirtt").setAttribute("scale", "0.2 0.2 0.2");
+          // document.getElementById("tshirtt").setAttribute("scale", "0.2 0.2 0.2");
         }else{
           document.getElementById("tshirtf").setAttribute("scale", "3 3 3");
           document.getElementById("tshirty").setAttribute("scale", "0 0 0");
-          document.getElementById("tshirtt").setAttribute("scale", "0.2 0.2 0.2");
+        //   document.getElementById("tshirtt").setAttribute("scale", "0.2 0.2 0.2");
         }
 
       })
