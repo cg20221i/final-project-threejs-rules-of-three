@@ -1,0 +1,139 @@
+.dialogue {
+  position: fixed;
+  width: 0;
+  height: 0;
+  left: -9999999px;
+  top: 0;
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s; }
+  .dialogue.this--visible {
+    display: block;
+    pointer-events: all;
+    opacity: 1;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .dialogue__closer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .dialogue__closerX {
+    pointer-events: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("../../src/close.png");
+    right: 50px;
+    top: 20px;
+    opacity: 0.75;
+    z-index: 99999999;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .dialogue__closerX {
+        right: 0; } }
+  .dialogue__text {
+    pointer-events: none;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    overflow: scroll;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    width: 768px;
+    max-height: 80vh;
+    animation: float 6s ease-in-out infinite; }
+    @media (max-width: 768px) {
+      .dialogue__text {
+        width: 300px; } }
+  .dialogue__wrapper {
+    background: rgba(255, 255, 255, 0.75);
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 55px rgba(0, 0, 0, 0.15);
+    animation: floatshadow 6s ease-in-out infinite; }
+    @media (max-width: 768px) {
+      .dialogue__wrapper {
+        width: 250px; } }
+    .dialogue__wrapper.this--pointereventable {
+      pointer-events: all; }
+  .dialogue__inner {
+    padding: 30px;
+    font-size: 28px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.45em;
+    color: #263d4a;
+    max-width: 600px; }
+    @media (max-width: 767px) {
+      .dialogue__inner {
+        font-size: 17px; } }
+  .dialogue__headline {
+    font-family: questa-grande, serif;
+    font-size: 32px;
+    margin: 0 0 0.25em;
+    line-height: 0.8em;
+    letter-spacing: -0.06em;
+    line-height: .75em;
+    letter-spacing: -.07em;
+    font-weight: 400;
+    line-height: 0.8em;
+    letter-spacing: -0.02em;
+    max-width: 600px; }
+    @media (min-width: 767px) {
+      .dialogue__headline {
+        font-size: 64px; } }
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%); }
+  50% {
+    transform: translate(-50%, calc(-50% - 20px)); }
+  100% {
+    transform: translate(-50%, -50%); } }
+@keyframes floatshadow {
+  0% {
+    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.6); }
+  50% {
+    box-shadow: 0 25px 25px 0px rgba(0, 0, 0, 0.2); }
+  100% {
+    box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.6); } }
+.patent-pending {
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  font-size: 10px;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.45em;
+  color: #263d4a; }
+
+.frame-blend-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  pointer-events: none !important;
+  transition: all 0.35s;
+  opacity: 0; }
+  .frame-blend-overlay.this--visible {
+    opacity: 1; }
+
+.canvascontainer {
+  transition: filter 200ms; }
+  .canvascontainer.this--blur {
+    filter: blur(7px); }
+
+/*# sourceMappingURL=styles.css.map */

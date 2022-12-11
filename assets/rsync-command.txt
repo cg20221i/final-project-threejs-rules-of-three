@@ -1,0 +1,1 @@
+rsync -a --exclude='.git/' -r . mmccdn@ftp.hostingbymmc.com:public_html/vr/shirt -v
