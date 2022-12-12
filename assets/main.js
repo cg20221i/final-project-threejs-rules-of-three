@@ -1,8 +1,4 @@
 var aframeInteractions = (function(){
-
-
-  // the showShadows variable is set in the HTML head, and if it is true,
-  // we're going to use visible shadows instead of (almost) invisible ones
   var _shadowOpacity = 0.2;
   if( !showShadows )
     _shadowOpacity = 0.0012;
@@ -25,9 +21,7 @@ var aframeInteractions = (function(){
       }); // end addEventListener mousedown
     } // end init
   });
-  /**
-   * Helper function for the Custom Desktop size component defined below
-   * Allows for different geometry (ie POI size) on Desktop
+  /* Allows for different geometry
    */
   var _handle_desktop_geometry = function( passed_el ){
     var desktop_geometry = passed_el.getAttribute('desktop-geometry');
@@ -43,10 +37,7 @@ var aframeInteractions = (function(){
       passed_el.setAttribute('geometry', regular_geometry);
     }
   };
-  /**
-   * different size component
-   * screen size
-   */
+  /*different size component & screen size */
   AFRAME.registerComponent('desktop-geometry', {
     schema: {
       radius: {type: 'string', default: ''},
