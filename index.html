@@ -35,6 +35,8 @@
         <!-- <a-asset-item id="tree-obj" src="src/straight.obj"></a-asset-item> -->
         <a-asset-item id="tree-obj" src="src/fitted.obj"></a-asset-item>
         <a-asset-item id="tree-obj" src="src/men-short-sleeve-shirt-001.obj"></a-asset-item>
+        <a-asset-item id="tree-obj" src="src/female-trunk-mannequin-001.obj"></a-asset-item>
+
 
         <img id="print1" src="src/pattern.jpeg?v=<?=$globalVersion?>">
         <img id="print2" src="src/art.jpeg?v=<?=$globalVersion?>">
@@ -65,23 +67,23 @@
         material="src: #print1">
       </a-entity>
 
-      <a-entity
+      <!-- <a-entity
         id="tshirtf"
         obj-model="obj: src/fitted.obj"
         scale="0.1 0.1 0.1"
         position="-0.2 -3.05 0"
         rotation="0 90 0"
         material="src: #print1">
-      </a-entity>
+      </a-entity> -->
 
-      <!--<a-entity
-        id="tshirtt"
-        obj-model="obj: src/men-short-sleeve-shirt-001.obj"
+      <a-entity
+        id="tshirtf"
+        obj-model="obj: src/female-trunk-mannequin-001.obj"
         scale="2 2 2"
         position="-0.2 -2.5 -6"
         rotation="0 90 0"
         material="src: #print1">
-      </a-entity> -->
+      </a-entity>
 
 
       <!-- Spotlight and fill lights -->
