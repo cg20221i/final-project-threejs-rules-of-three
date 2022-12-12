@@ -4,13 +4,7 @@ const LoopMode = {
   pingpong: THREE.LoopPingPong
 };
 
-/**
- * animation-mixer
- *
- * Player for animation clips. Intended to be compatible with any model format that supports
- * skeletal or morph animations through THREE.AnimationMixer.
- * See: https://threejs.org/docs/?q=animation#Reference/Animation/AnimationMixer
- */
+
 AFRAME.registerComponent('animation-mixer', {
   schema: {
     clip:  {default: '*'},
