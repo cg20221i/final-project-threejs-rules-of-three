@@ -40,6 +40,7 @@
         <!-- <a-asset-item id="tree-obj" src="src/straight.obj"></a-asset-item> -->
         <a-asset-item id="tree-obj" src="src/fitted.obj"></a-asset-item>
         <a-asset-item id="tree-obj" src="src/men-short-sleeve-shirt-001.obj"></a-asset-item>
+        <a-asset-item id="tree-obj" src="src/femaletshirt.obj.obj"></a-asset-item>
 
         <img id="print1" src="src/pattern.jpeg?v=<?=$globalVersion?>">
         <img id="print2" src="src/art.jpeg?v=<?=$globalVersion?>">
@@ -48,8 +49,9 @@
         <img id="print5" src="src/bismillah.jpg?v=<?=$globalVersion?>">
         <img id="print6" src="src/red.jpeg?v=<?=$globalVersion?>">">
         <img id="print7" src="src/blue.jpeg?v=<?=$globalVersion?>">">
+        <img id="print8" src="src/jepink.png?v=<?=$globalVersion?>">">
 
-        <img id="img_sky" src="src/bgwhite2.jpg?v=<?=$globalVersion?>">
+        <img id="img_sky" src="src/cozybg.jpg?v=<?=$globalVersion?>">
       </a-assets>
 
 
@@ -63,7 +65,7 @@
       <a-entity
         id="tshirty"
         obj-model="obj: src/men-short-sleeve-shirt-001.obj"
-        scale="3 3 3"
+        scale="0.1 0.1 0.1"
         position="-0.2 -3.05 0"
         rotation="0 90 0"
         material="src: #print1">
@@ -78,10 +80,10 @@
         material="src: #print1">
       </a-entity>
 
-      <!-- <a-entity
+      <!--<a-entity
         id="tshirtt"
-        obj-model="obj: src/men-short-sleeve-shirt-001.obj"
-        scale="2 2 2"
+        obj-model="obj: src/femaletshirt.obj"
+        scale="0.1 0.1 0.1"
         position="-0.2 -2.5 -6"
         rotation="0 90 0"
         material="src: #print1">
@@ -112,8 +114,8 @@
       <div class="switcher__container">
         <div class="switcher__headline">Shirt Fit</div>
         <button class="switcher__button type_switcher this--active" data-shotfittype="tshirtf">Fitted</button>
-        <button class="switcher__button type_switcher" data-shotfittype="tshirty">Straight</button>
-        <button class="switcher__button type_switcher" data-shotfittype="tshirtt">Mannequin</button>
+        <button class="switcher__button type_switcher this--fade" data-shotfittype="tshirty">Straight</button>
+        <button class="switcher__button type_switcher this--fade" data-shotfittype="tshirtt">Mannequin</button>
       </div>
 
       <div class="switcher__container">
@@ -125,6 +127,7 @@
         <button class="switcher__button material_switcher" data-outfitid="print5">Bismillah</button>
         <button class="switcher__button material_switcher" data-outfitid="print6">Red</button>
         <button class="switcher__button material_switcher" data-outfitid="print7">Blue</button>
+        <button class="switcher__button material_switcher" data-outfitid="print8">jepink</button>
         <!-- <button class="switcher__button material_switcher" data-outfitid="print5">Calligraphy</button> -->
       </div>
     </div>
