@@ -1,3 +1,4 @@
+
 var aframeInteractions = (function(){
   var _shadowOpacity = 0.2;
   if( !showShadows )
@@ -18,8 +19,8 @@ var aframeInteractions = (function(){
           window.location.href = fileTraget;
         }, 175);
 
-      }); // end addEventListener mousedown
-    } // end init
+      }); 
+    }
   });
   /* Allows for different geometry
    */
@@ -118,8 +119,7 @@ var aframeInteractions = (function(){
 
   /* pinch to zoom change event */
   document.addEventListener('gesturechange', function(e) {
-    // 1-e.scale, because everything smaller than one should be treated as negaive
-    // then the whole thing is revered again, and made smaller and fed to the same
+    // 1-e.scale, because everything smaller
     _cameraZoomAdjustment( -( (1-e.scale)*0.1) );
   }, false);
 
