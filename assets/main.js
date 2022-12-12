@@ -1,8 +1,8 @@
+
 var aframeInteractions = (function(){
 
 
-  // the showShadows variable is set in the HTML head, and if it is true,
-  // we're going to use visible shadows instead of (almost) invisible ones
+
   var _shadowOpacity = 0.2;
   if( !showShadows )
     _shadowOpacity = 0.0012;
