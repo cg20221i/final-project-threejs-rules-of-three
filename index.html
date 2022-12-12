@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>3D-Try on</title>
+    <!--
+      Copyright Moritz Zimmer, 2020-2022
+    -->
+    <title>Fashion Show at Lunch</title>
+    <meta name="description" content="An awesome test for Objects and Materials in Aframe">
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -11,6 +15,7 @@
       var showShadows = true;
     </script>
 
+    <!-- Loading Aframe and Dependencies -->
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="assets/aframe-orbit-controls.min.js"></script>
     <!-- <script src="assets/aframe-teleport-controls.min.js"></script> -->
@@ -33,8 +38,9 @@
       <!-- All Images -->
       <a-assets>
         <!-- <a-asset-item id="tree-obj" src="src/straight.obj"></a-asset-item> -->
-        <!-- <a-asset-item id="tree-obj" src="src/fitted.obj"></a-asset-item> -->
+        <a-asset-item id="tree-obj" src="src/fitted.obj"></a-asset-item>
         <a-asset-item id="tree-obj" src="src/men-short-sleeve-shirt-001.obj"></a-asset-item>
+        <a-asset-item id="tree-obj" src="src/femaletshirt.obj.obj"></a-asset-item>
 
         <img id="print1" src="src/pattern.jpeg?v=<?=$globalVersion?>">
         <img id="print2" src="src/art.jpeg?v=<?=$globalVersion?>">
@@ -67,17 +73,17 @@
 
       <a-entity
         id="tshirtf"
-        obj-model="obj: src/female-trunk-mannequin-001.obj"
+        obj-model="obj: src/fitted.obj"
         scale="0.1 0.1 0.1"
-        position="-0.2 -3.05 0"
+        position="-0.2 -2.5 -6"
         rotation="0 90 0"
         material="src: #print1">
       </a-entity>
 
       <!--<a-entity
         id="tshirtt"
-        obj-model="obj: src/men-short-sleeve-shirt-001.obj"
-        scale="2 2 2"
+        obj-model="obj: src/femaletshirt.obj"
+        scale="0.1 0.1 0.1"
         position="-0.2 -2.5 -6"
         rotation="0 90 0"
         material="src: #print1">
@@ -87,10 +93,14 @@
       <!-- Spotlight and fill lights -->
       <a-entity light="angle: 20; decay: 7; castShadow: true; distance: 100; shadowCameraFov: 88.5; shadowCameraNear: 2.22; shadowCameraTop: 6.06; shadowCameraRight: 16.83; shadowCameraBottom: -4.91; shadowCameraLeft: -13.19; intensity: 0.25" position="-7.52044 6.6806 2.678"></a-entity>
 
-      <a-entity light="angle: 20; decay: 10; castShadow: true; distance: 100; shadowCameraFov: 88.5; shadowCameraNear: 2.04; shadowCameraTop: 9.48; shadowCameraRight: 16.74; shadowCameraBottom: -4.67; shadowCameraLeft: -13.27; intensity: 0.5" position="-7.52044 6.6806 2.678"></a-entity>
+      <a-entity light="angle: 20; decay: 10; castShadow: true; distance: 10; shadowCameraFov: 88.5; shadowCameraNear: 2.04; shadowCameraTop: 9.48; shadowCameraRight: 16.74; shadowCameraBottom: -4.67; shadowCameraLeft: -13.27; intensity: 0.5" position="13.93467 17.45536 -7.90778"></a-entity>
+
+      <a-entity light="angle: 20; decay: 10; castShadow: true; distance: 10; shadowCameraFov: 88.5; shadowCameraNear: 2.04; shadowCameraTop: 9.48; shadowCameraRight: 16.74; shadowCameraBottom: -4.67; shadowCameraLeft: -13.27; intensity: 0.5" position="13.93467 17.45536 -7.90778"></a-entity>
 
       <a-entity light="intensity: 0.5; type: ambient"></a-entity>
 
+
+      <!-- Good old friend :) -->
       <a-sphere position="6.96188 -0.37915 -9.11629" id="pizzaSphere" radius="1.25" color="#EF2D5E" shadow="" material="opacity: 0.6" geometry="radius: 0.5" animation="property: position; to: 5 -4.6 2; dur: 5500; dir: alternate; easing: linear; loop: true"></a-sphere>
 
 
@@ -102,19 +112,19 @@
     <!-- UI Elements -->
     <div class="switcher">
       <div class="switcher__container">
-        <div class="switcher__headline">Type</div>
-        <button class="switcher__button type_switcher this--active" data-shotfittype="tshirtf">Woman</button>
-        <button class="switcher__button type_switcher" data-shotfittype="tshirty">Man</button>
-        <!-- <button class="switcher__button type_switcher" data-shotfittype="tshirtt">Mannequin</button> -->
+        <div class="switcher__headline">Shirt Fit</div>
+        <button class="switcher__button type_switcher this--active" data-shotfittype="tshirtf">Fitted</button>
+        <button class="switcher__button type_switcher this--fade" data-shotfittype="tshirty">Straight</button>
+        <button class="switcher__button type_switcher this--fade" data-shotfittype="tshirtt">Mannequin</button>
       </div>
 
       <div class="switcher__container">
-        <div class="switcher__headline">Choose Design</div>
+        <div class="switcher__headline">Design</div>
         <button class="switcher__button material_switcher this--active" data-outfitid="print1">Abstract</button>
-        <button class="switcher__button material_switcher" data-outfitid="print2">Art</button>
+        <button class="switcher__button material_switcher" data-outfitid="print2">Paint</button>
         <button class="switcher__button material_switcher" data-outfitid="print3">Geometric</button>
         <button class="switcher__button material_switcher" data-outfitid="print4">Rainbow</button>
-        <button class="switcher__button material_switcher" data-outfitid="print5">Arabic</button>
+        <button class="switcher__button material_switcher" data-outfitid="print5">Bismillah</button>
         <button class="switcher__button material_switcher" data-outfitid="print6">Red</button>
         <button class="switcher__button material_switcher" data-outfitid="print7">Blue</button>
         <button class="switcher__button material_switcher" data-outfitid="print8">jepink</button>
@@ -122,7 +132,7 @@
       </div>
     </div>
 
-    <!-- execute -->
+    <!-- Execute scripts after everything is loaded :) -->
     <script>
       aframeInteractions.init();
     </script>
